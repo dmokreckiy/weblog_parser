@@ -11,7 +11,6 @@ class Validator
     validate_empty_args
     validate_single_file_argument
     validate_file_existance
-    validate_log_format
   end
 
   private
@@ -35,9 +34,5 @@ class Validator
 
     puts "No such file exists - #{opts.first}"
     exit(1)
-  end
-
-  def validate_log_format
-    # Not implemented
   end
 end
