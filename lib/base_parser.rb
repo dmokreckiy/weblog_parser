@@ -4,7 +4,10 @@ require 'pathname'
 require 'shellwords'
 
 class BaseParser
-  attr_reader :file_path, :file
+  PAGE_VIEWS = ' page views'
+  PAGE_UNIQUE_VIEWS = ' unique page views'
+
+  attr_reader :file_path, :file, :output
 
   def initialize(file_path)
     @file_path = file_path
@@ -33,14 +36,16 @@ class BaseParser
   end
 
   def print_result
-    puts output
+    puts 'Most page views'
+    puts output[:views]
+    puts 'Most unique views'
+    puts output[:unique_views]
   end
 
-  def set_output(formated_result)
-    @output ||= formated_result
-  end
-
-  def output
-    @output
+  def set_output(most_views, most_unique_views)
+    @output ||= {
+      views: most_views,
+      unique_views: most_unique_views
+    }
   end
 end
