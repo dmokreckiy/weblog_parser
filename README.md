@@ -2,7 +2,7 @@
 
 ## Description
 
-Create a ruby script that take a log file name and returns descending list of unique visited links.
+Create a ruby script that take a log file name and returns descending list of unique/all visited links.
 
 ```
 /home 90 unique visits
