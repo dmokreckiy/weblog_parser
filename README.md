@@ -25,6 +25,5 @@ Create a ruby script that take a log file name and returns descending list of un
 
 ## To Dos
 
-1. Specs
+1. Some more specs
 2. Documentation
-3. Ruby native implementation
